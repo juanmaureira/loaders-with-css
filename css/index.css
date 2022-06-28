@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: black;
+}
+
+.simple__loader{
+    height: 10rem;
+    width: 10rem;
+    margin: auto;
+    border: 0.5rem solid rgba(255,255,255,.2);
+    border-radius: 50%;
+    border-left-color: red;
+    animation: load 1s linear infinite;    
+}
+
+@keyframes load{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.simple__spinner{
+    margin: 2rem auto;
+    height: 10rem;
+    width: 10rem;
+    border: 0.5rem solid rgba(255,255,255,.2);
+    border-radius: 50%;
+    animation: simple_spinner 1s linear infinite; 
+}
+
+@keyframes simple_spinner {
+    0% {
+        transform: rotate(0deg);
+        border-left-color: #e65c00;
+    }
+    50%{
+        transform: rotate(180deg);
+        border-left-color: #18b201;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-left-color: #0456c8;
+    }  
+}
+
+.loader__anim{
+    margin: 2rem auto;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: none;
+    animation: spiner 1s linear infinite;    
+}
+
+@keyframes spiner {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: .1rem 0.2rem 0.5rem #e65c00;
+    }
+    50% {
+        transform: rotate(180deg);
+        box-shadow: .1rem 0.2rem 0.5rem #18b201;
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: .1rem 0.2rem 0.5rem #0456c8;
+    } 
+}
+
+span{
+    color: white;
+}
